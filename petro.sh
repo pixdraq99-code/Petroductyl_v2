@@ -23,7 +23,7 @@ banner(){
 refresh_color
 clear
 echo -e "${C1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e " ${BOLD}${C2}⚡ UPTIME: ${C1}$UPTIME${NC}  ${BOLD}${C2}👑 OWNER: ${C1}B1 @ GUIDECLOUD${NC}  ${BOLD}${C2}📅 YEAR: ${C1}2026${NC}"
+echo -e " ${BOLD}${C2}⚡ UPTIME: ${C1}$UPTIME${NC}  ${BOLD}${C2}👑 OWNER: ${C1}PIXDRAQ99 @ HYPERCLOUD${NC}  ${BOLD}${C2}📅 YEAR: ${C1}2026${NC}"
 echo -e "${C1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${C1}"
 echo -e "  ██████╗ ██╗██╗  ██╗██████╗ ██████╗  █████╗  ██████╗ 
