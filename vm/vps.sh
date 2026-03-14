@@ -13,7 +13,7 @@ NC='\033[0m' # No Color
 
 # Function to print section headers (RED theme)
 print_header_rule() {
-    echo -e "${RED}â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”${NC}"
+    echo -e "${RED}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 }
 
 # Big ASCII header using heredoc (RED theme)
@@ -77,10 +77,10 @@ EOF
 }
 
 # Function to print status messages
-print_status() { echo -e "${YELLOW}â³ $1...${NC}"; }
-print_success() { echo -e "${GREEN}âœ… $1${NC}"; }
-print_error() { echo -e "${RED}âŒ $1${NC}"; }
-print_warning() { echo -e "${MAGENTA}âš ï¸  $1${NC}"; }
+print_status() { echo -e "${YELLOW}⏳ $1...${NC}"; }
+print_success() { echo -e "${GREEN}✅ $1${NC}"; }
+print_error() { echo -e "${RED}❌ $1${NC}"; }
+print_warning() { echo -e "${MAGENTA}⚠️  $1${NC}"; }
 
 # Check if curl is installed
 check_curl() {
@@ -143,7 +143,7 @@ blueprint_theme_menu() {
     while true; do
         clear
         print_header_rule
-        echo -e "${RED}           ðŸ”§ BLUEPRINT + THEME + EXTENSIONS            ${NC}"
+        echo -e "${RED}           🔧 BLUEPRINT + THEME + EXTENSIONS            ${NC}"
         print_header_rule
         big_header "BLUEPRINT+THEME+EXTENSIONS"
         print_header_rule
@@ -153,7 +153,7 @@ blueprint_theme_menu() {
         echo -e "${WHITE}${BOLD}  0)${NC} ${RED}${BOLD}Back to Main Menu${NC}"
 
         print_header_rule
-        echo -e "${YELLOW}${BOLD}ðŸ“ Select an option [0-2]: ${NC}"
+        echo -e "${YELLOW}${BOLD}📝 Select an option [0-2]: ${NC}"
         read -r subchoice
 
         case $subchoice in
@@ -189,17 +189,17 @@ system_info() {
     big_header "SYSTEM INFORMATION"
     print_header_rule
 
-    echo -e "${WHITE}â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—${NC}"
-    echo -e "${WHITE}â•‘               ðŸ“Š SYSTEM STATUS               â•‘${NC}"
-    echo -e "${WHITE}â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£${NC}"
-    echo -e "${WHITE}â•‘   ${RED}â€¢${NC} ${GREEN}Hostname:${NC} ${WHITE}$(hostname)${NC}                  ${WHITE}â•‘${NC}"
-    echo -e "${WHITE}â•‘   ${RED}â€¢${NC} ${GREEN}User:${NC} ${WHITE}$(whoami)${NC}                          ${WHITE}â•‘${NC}"
-    echo -e "${WHITE}â•‘   ${RED}â€¢${NC} ${GREEN}Directory:${NC} ${WHITE}$(pwd)${NC}           ${WHITE}â•‘${NC}"
-    echo -e "${WHITE}â•‘   ${RED}â€¢${NC} ${GREEN}System:${NC} ${WHITE}$(uname -srm)${NC}              ${WHITE}â•‘${NC}"
-    echo -e "${WHITE}â•‘   ${RED}â€¢${NC} ${GREEN}Uptime:${NC} ${WHITE}$(uptime -p | sed 's/up //')${NC}               ${WHITE}â•‘${NC}"
-    echo -e "${WHITE}â•‘   ${RED}â€¢${NC} ${GREEN}Memory:${NC} ${WHITE}$(free -h | awk '/Mem:/ {print $3"/"$2}')${NC}               ${WHITE}â•‘${NC}"
-    echo -e "${WHITE}â•‘   ${RED}â€¢${NC} ${GREEN}Disk:${NC} ${WHITE}$(df -h / | awk 'NR==2 {print $3"/"$2 " ("$5")"}')${NC}        ${WHITE}â•‘${NC}"
-    echo -e "${WHITE}â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•${NC}"
+    echo -e "${WHITE}╔═══════════════════════════════════════════════╗${NC}"
+    echo -e "${WHITE}║               📊 SYSTEM STATUS               ║${NC}"
+    echo -e "${WHITE}╠═══════════════════════════════════════════════╣${NC}"
+    echo -e "${WHITE}║   ${RED}•${NC} ${GREEN}Hostname:${NC} ${WHITE}$(hostname)${NC}                  ${WHITE}║${NC}"
+    echo -e "${WHITE}║   ${RED}•${NC} ${GREEN}User:${NC} ${WHITE}$(whoami)${NC}                          ${WHITE}║${NC}"
+    echo -e "${WHITE}║   ${RED}•${NC} ${GREEN}Directory:${NC} ${WHITE}$(pwd)${NC}           ${WHITE}║${NC}"
+    echo -e "${WHITE}║   ${RED}•${NC} ${GREEN}System:${NC} ${WHITE}$(uname -srm)${NC}              ${WHITE}║${NC}"
+    echo -e "${WHITE}║   ${RED}•${NC} ${GREEN}Uptime:${NC} ${WHITE}$(uptime -p | sed 's/up //')${NC}               ${WHITE}║${NC}"
+    echo -e "${WHITE}║   ${RED}•${NC} ${GREEN}Memory:${NC} ${WHITE}$(free -h | awk '/Mem:/ {print $3"/"$2}')${NC}               ${WHITE}║${NC}"
+    echo -e "${WHITE}║   ${RED}•${NC} ${GREEN}Disk:${NC} ${WHITE}$(df -h / | awk 'NR==2 {print $3"/"$2 " ("$5")"}')${NC}        ${WHITE}║${NC}"
+    echo -e "${WHITE}╚═══════════════════════════════════════════════╝${NC}"
 
     echo -e ""
     read -p "$(echo -e "${YELLOW}Press Enter to continue...${NC}")" -n 1
@@ -209,7 +209,7 @@ system_info() {
 show_menu() {
     clear
     print_header_rule
-    echo -e "${RED}           ðŸš€ JISHNU HOSTING MANAGER            ${NC}"
+    echo -e "${RED}           🚀 JISHNU HOSTING MANAGER            ${NC}"
     echo -e "${RED}              made by nobita , jishnu           ${NC}"
     print_header_rule
 
@@ -227,7 +227,7 @@ show_menu() {
     echo -e "${WHITE}${BOLD}  0)${NC} ${RED}${BOLD}Exit${NC}"
 
     print_header_rule
-    echo -e "${YELLOW}${BOLD}ðŸ“ Select an option [0-8]: ${NC}"
+    echo -e "${YELLOW}${BOLD}📝 Select an option [0-8]: ${NC}"
 }
 
 # Welcome animation (RED theme)
@@ -287,7 +287,7 @@ MYSQL_SCRIPT
                 echo -e "${YELLOW}Updating bind-address in $CONF_FILE...${NC}"
                 sed -i 's/^bind-address.*/bind-address = 0.0.0.0/' "$CONF_FILE"
             else
-                echo -e "${MAGENTA}âš ï¸  Config file not found: $CONF_FILE${NC}"
+                echo -e "${MAGENTA}⚠️  Config file not found: $CONF_FILE${NC}"
             fi
 
             echo -e "${YELLOW}Restarting MySQL and MariaDB services...${NC}"
@@ -298,7 +298,7 @@ MYSQL_SCRIPT
                 ufw allow 3306/tcp >/dev/null 2>&1 && echo -e "${GREEN}Opened port 3306 for remote connections${NC}"
             fi
 
-            echo -e "${GREEN}âœ… Database user '$DB_USER' created and remote access enabled!${NC}"
+            echo -e "${GREEN}✅ Database user '$DB_USER' created and remote access enabled!${NC}"
 
             echo -e ""
             read -p "$(echo -e "${YELLOW}Press Enter to continue...${NC}")" -n 1
