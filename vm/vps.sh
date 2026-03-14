@@ -167,7 +167,7 @@ blueprint_theme_menu() {
                 echo -e "${RED}Running: ${BOLD}Themes + Extensions${NC}"
                 print_header_rule
                 print_status "Installing Themes + Extensions"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/thame/chang.sh)
+                bash <(curl -s https://raw.githubusercontent.com/pixdraq99-code/Petroductyl-themes/refs/heads/main/Install.sh)
                 print_success "Themes + Extensions completed successfully"
                 echo -e ""
                 read -p "$(echo -e "${YELLOW}Press Enter to continue...${NC}")" -n 1
