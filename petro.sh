@@ -107,7 +107,7 @@ echo -en " ${BOLD}${C1}❯❯${NC} ${BOLD}${C2}COMMANDER B1, SELECT UNIT: ${NC}"
 read c
 
 case $c in
- 1) bash <(curl -s https://raw.githubusercontent.com/pixdraq99-code/Petroductyl_v2/refs/heads/main/vm/vps.sh) ;;
+ 1) bash <(curl -s https://raw.githubusercontent.com/pixdraq99-code/Petroductyl_v2/main/vm/vps.sh) ;;
  2) panel_menu ;;
  3) bash <(curl -s https://raw.githubusercontent.com/debraj0997/vm/refs/heads/main/wings/www.sh) ;;
  4) tools_menu ;;
